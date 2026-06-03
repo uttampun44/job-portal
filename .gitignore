@@ -1,0 +1,26 @@
+#frontend ignore
+frontend-job-portal/node_modules/
+frontend-job-portal/build/
+frontend-job-portal/dist/
+frontend-job-portal/.env
+frontend-job-portal/.env.local
+frontend-job-portal/.env.development
+frontend-job-portal/.env.production
+frontend-job-portal/.env.test
+frontend-job-portal/.DS_Store
+frontend-job-portal/public/
+frontend-job-portal/yarn.lock
+frontend-job-portal/.vscode/
+
+#backend ignore
+backend-job-portal/node_modules/
+backend-job-portal/build/
+backend-job-portal/dist/
+backend-job-portal/.env
+backend-job-portal/.env.local
+backend-job-portal/.env.development
+backend-job-portal/.env.production
+backend-job-portal/.env.test
+backend-job-portal/.DS_Store
+backend-job-portal/yarn.lock
+backend-job-portal/.vscode/
