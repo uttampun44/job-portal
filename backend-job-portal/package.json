@@ -15,14 +15,25 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@prisma/adapter-mariadb": "^7.8.0",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "bcrypt": "^6.0.0",
     "chalk": "^5.6.2",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "pg": "^8.21.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
+    "@types/bcrypt": "^6.0.0",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.8.0",
+    "tsconfig-paths": "^4.2.0",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8"

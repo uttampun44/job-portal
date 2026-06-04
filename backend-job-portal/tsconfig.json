@@ -43,6 +43,13 @@
     "baseUrl": ".",
     "paths": {
        "@/*": ["src/*"],
+        "@lib/*": ["src/lib/*"],
+        "@schema/*": ["src/prisma/schema/*"],
+        "@controllers/*": ["src/controllers/*"],
+        "@routes/*": ["src/routes/*"],
+        "@utils/*": ["src/utils/*"],
+        "@services/*": ["src/services/*"],
+        "@types/*": ["src/types/*"]
      },
   },
     "include": ["src/**/*"],
