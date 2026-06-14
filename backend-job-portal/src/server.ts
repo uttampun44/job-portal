@@ -2,7 +2,7 @@ import express from 'express';
 import chalk from 'chalk';
 import dotenv from 'dotenv';
 import { type Request, type Response } from 'express';
-import Routes from "@routes/route";
+import Routes from "@routes/route.ts";
 
 dotenv.config();
 

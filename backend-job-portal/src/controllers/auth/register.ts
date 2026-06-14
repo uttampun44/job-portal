@@ -1,5 +1,5 @@
-import {createUser, getUserByEmail} from "@services/users.service";
-import { RegisterSchema } from "@controllers/auth/auth";
+import {createUser, getUserByEmail} from "@services/users.service.ts";
+import {RegisterSchema} from "./auth.type.js";
 import {type Request, type Response} from "express";
 import bycrypt from "bcrypt";
 
