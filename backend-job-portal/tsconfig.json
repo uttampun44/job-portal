@@ -2,7 +2,7 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
 
     // Environment Settings
@@ -44,7 +44,7 @@
     "paths": {
        "@/*": ["src/*"],
         "@lib/*": ["src/lib/*"],
-        "@schema/*": ["src/prisma/schema/*"],
+        "@schema/*": ["src/schema/*"],
         "@controllers/*": ["src/controllers/*"],
         "@routes/*": ["src/routes/*"],
         "@utils/*": ["src/utils/*"],
@@ -52,6 +52,6 @@
         "@types/*": ["src/types/*"]
      }
   },
-    "include": ["src/**/*"],
+    // "include": ["src/**/*", "prisma/schema/typeDef.ts"],
   "exclude": ["node_modules", "dist"],
 }

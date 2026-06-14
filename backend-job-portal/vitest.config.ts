@@ -10,7 +10,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
       "@lib": path.resolve(__dirname, "./src/lib"),
-      "@schema": path.resolve(__dirname, "./src/prisma/schema"),
+      "@schema": path.resolve(__dirname, "./src/schema"),
       "@controllers": path.resolve(__dirname, "./src/controllers"),
       "@routes": path.resolve(__dirname, "./src/routes"),
       "@utils": path.resolve(__dirname, "./src/utils"),

@@ -1,15 +1,14 @@
-import {prisma} from "../lib/prisma.js";
+import {prisma} from "../lib/prisma.ts";
+import bcrypt from "bcrypt";
 
 export async function createUser(email: string, name: string, password: string) {
   try {
-    const user = await (prisma as any).user.create({
-      data: {
-        email,
-        name,
-        password,
-      },
+     const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await prisma.users.create({
+      data: { email, name, password: hashedPassword },
     });
-    return user;
+    const { password: _pw, ...safeUser } = user;
+    return safeUser;
   } catch (error) {
     console.error("Error creating user:", error);
     throw new Error("Failed to create user");
@@ -18,7 +17,7 @@ export async function createUser(email: string, name: string, password: string) 
 
 export async function getUserByEmail({ email }: { email: string }) {
   try {
-    const user = await (prisma as any).user.findUnique({
+    const user = await prisma.users.findUnique({
       where: { email },
     });
     return user;

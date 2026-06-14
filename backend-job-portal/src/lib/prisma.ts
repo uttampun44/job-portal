@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../generated/prisma/client.js";
+import { PrismaClient } from "../../prisma/generated/prisma/client.ts";
 import dotenv from "dotenv";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 
@@ -9,10 +9,10 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 const adapter = new PrismaMariaDb({
-  user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
-    host: process.env.DATABASE_HOST,
+  user: process.env.DATABASE_USER as string,
+    password: process.env.DATABASE_PASSWORD as string,
+    database: process.env.DATABASE_NAME as string,
+    host: process.env.DATABASE_HOST as string,
     port: parseInt(process.env.DATABASE_PORT || '3306', 10),
 });
 
