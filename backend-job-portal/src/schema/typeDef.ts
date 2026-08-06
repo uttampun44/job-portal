@@ -13,8 +13,14 @@ export const typeDefs = gql`
  input RegisterInput {
    name: String!
    email: String!
-    password: String! 
+   password: String! 
+   confirmPassword: String!
 }
+input LoginInput {
+  email: String!
+  password: String!
+}
+
   type AuthPayload {
     token: String!
     user: User!
@@ -22,14 +28,24 @@ export const typeDefs = gql`
 
   type Mutation {
     register(input: RegisterInput!): AuthPayload!
+    login(input: LoginInput!): AuthPayload!
   }
 
   type Query {
     _empty: String
   }
 `
+// register input
 export interface RegisterInput {
   name: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
+
+// login input
+
+export interface LoginInput {
   email: string;
   password: string;
 }

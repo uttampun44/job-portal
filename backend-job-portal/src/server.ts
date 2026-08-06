@@ -14,11 +14,15 @@ dotenv.config();
 
 const httpServer = http.createServer(express());
 
+// The stacktrace in extensions
+//  don't want this leaking in production filepath 
+
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
+  includeStacktraceInErrorResponses: false,
 });
 
 await server.start();
