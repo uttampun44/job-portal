@@ -1,12 +1,12 @@
 import './App.css'
 import React from 'react'
 import { RouterProvider } from "react-router";
-import {routes} from "@routes/routes";
+import Routes from "@routes/routes";
 
 function App() {
   return (
     <React.Fragment>
-      <RouterProvider router={routes} />
+      <RouterProvider router={Routes} />
     </React.Fragment>
   )
 }
